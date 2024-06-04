@@ -15,13 +15,13 @@
             android:id="@+id/Logintext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="20dp"
             android:text="Login"
             android:textColor="@color/black"
             android:textSize="50dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/imageView"
-            app:layout_constraintHorizontal_bias="0.441"
+            app:layout_constraintHorizontal_bias="0.47"
             app:layout_constraintStart_toStartOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -122,9 +122,11 @@
             android:id="@+id/imageView"
             android:layout_width="159dp"
             android:layout_height="142dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/temp_logo"
-            tools:layout_editor_absoluteX="128dp"
-            tools:layout_editor_absoluteY="31dp" />
+            tools:layout_editor_absoluteY="51dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
