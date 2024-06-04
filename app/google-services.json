@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "277894516353",
+    "project_id": "hackathoncollab2024",
+    "storage_bucket": "hackathoncollab2024.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277894516353:android:9700e8f1c92cb658ea4780",
+        "android_client_info": {
+          "package_name": "com.example.hackathoncollab"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCGgq0mmoKAG3V3bJ7RCux6QxTdmaxfvI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
