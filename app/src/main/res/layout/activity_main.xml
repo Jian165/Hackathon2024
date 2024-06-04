@@ -21,9 +21,10 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.258" />
+            app:layout_constraintVertical_bias="0.217" />
 
         <TextView
             android:id="@+id/textView"
@@ -38,7 +39,7 @@
             app:layout_constraintTop_toBottomOf="@+id/Logintext" />
 
         <EditText
-            android:id="@+id/txt_UserName"
+            android:id="@+id/txt_Email"
             android:layout_width="293dp"
             android:layout_height="45dp"
             android:layout_marginTop="20dp"
@@ -58,10 +59,10 @@
             android:ems="10"
             android:inputType="textPassword"
             android:text="Name"
-            app:layout_constraintEnd_toEndOf="@+id/txt_UserName"
+            app:layout_constraintEnd_toEndOf="@+id/txt_Email"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/txt_UserName"
-            app:layout_constraintTop_toBottomOf="@+id/txt_UserName" />
+            app:layout_constraintStart_toStartOf="@+id/txt_Email"
+            app:layout_constraintTop_toBottomOf="@+id/txt_Email" />
 
         <Button
             android:id="@+id/btn_Login"
