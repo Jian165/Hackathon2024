@@ -9,15 +9,13 @@
          />
     <item
         android:id="@+id/Events"
-        android:title="Event"
+        android:title="Events"
         android:icon="@drawable/event"
          />
 
     <item
-        android:id="@+id/Expenses"
-        android:title="Expenses"
-        android:icon="@drawable/expenses"
-         />
+        android:id="@+id/Payments"
+        android:title="Payments"/>
 
 
 </menu>

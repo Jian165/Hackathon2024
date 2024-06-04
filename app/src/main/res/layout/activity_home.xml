@@ -15,12 +15,13 @@
         android:background="@color/white"
         app:itemIconTint="@color/nav_item_color"
         app:itemTextColor="@color/nav_item_color"
-        app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottomnav" />
+        app:menu="@menu/bottomnav"
+        app:labelVisibilityMode="labeled"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
