@@ -24,7 +24,10 @@ public class MainActivity extends AppCompatActivity {
         edt_Email =  findViewById(R.id.txt_Email);
         edt_Password =  findViewById(R.id.txt_Password);
         btn_loginLocalMail = findViewById(R.id.btn_Login);
-        btn_loginLocalMail =  findViewById(R.id.btn_LogintWithGoogle);
+        btn_Gmail =  findViewById(R.id.btn_LogintWithGoogle);
+        txt_CreateAccount = findViewById(R.id.txt_CreateAccount);
+
+
 
 
 
