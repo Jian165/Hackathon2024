@@ -5,16 +5,19 @@
     <item
         android:id="@+id/Tasks"
         android:title="Tasks"
-        android:icon="@drawable/tasks" />
+        android:icon="@drawable/tasks"
+         />
     <item
         android:id="@+id/Events"
         android:title="Event"
-        android:icon="@drawable/Event" />
+        android:icon="@drawable/event"
+         />
 
     <item
         android:id="@+id/Expenses"
         android:title="Expenses"
-        android:icon="@drawable/Expenses" />
+        android:icon="@drawable/expenses"
+         />
 
 
 </menu>
