@@ -5,12 +5,12 @@
     <item
         android:id="@+id/Tasks"
         android:title="Tasks"
-        android:icon="@drawable/tasks"
+        android:icon="@drawable/taskselector"
          />
     <item
         android:id="@+id/Events"
         android:title="Events"
-        android:icon="@drawable/event"
+        android:icon="@drawable/event_selector"
          />
 
     <item

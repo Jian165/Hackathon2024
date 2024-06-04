@@ -4,21 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:background="@drawable/login_background"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+  >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+        </ImageView>
 
         <TextView
             android:id="@+id/Logintext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Login"
-            android:textColor="@color/black"
+            android:text="When was it?"
+            android:fontFamily="@font/bold"
+            android:textColor="@color/white"
             android:textSize="50dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/imageView"
@@ -33,6 +45,8 @@
             android:layout_marginTop="16dp"
             android:text="Sign in to continue"
             android:textSize="20dp"
+            android:fontFamily="@font/medium"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/Logintext"
             app:layout_constraintHorizontal_bias="0.507"
             app:layout_constraintStart_toStartOf="@+id/Logintext"
@@ -80,7 +94,8 @@
             android:layout_height="45dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/bg_pillshape_purple"
-            android:text="Login "
+            android:text="Login"
+            android:fontFamily="@font/medium"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/txt_Password"
             app:layout_constraintHorizontal_bias="0.492"
@@ -104,6 +119,7 @@
             android:layout_height="45dp"
             android:layout_marginTop="4dp"
             android:text="Login With google"
+            android:fontFamily="@font/medium"
             android:textColor="@color/white"
             android:background="@drawable/bg_pillshape_purple"
             app:layout_constraintEnd_toEndOf="@+id/view"
@@ -117,6 +133,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Or"
+            android:fontFamily="@font/medium"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/view"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="@+id/view"
@@ -128,6 +146,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Create Account"
+            android:textColor="@color/white"
+            android:fontFamily="@font/medium"
             app:layout_constraintEnd_toEndOf="@+id/btn_Login"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="@+id/btn_Login"
@@ -135,13 +155,14 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="159dp"
-            android:layout_height="142dp"
-            android:layout_marginTop="64dp"
+            android:layout_width="177dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="92dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/temp_logo" />
+            app:srcCompat="@drawable/img_1" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
