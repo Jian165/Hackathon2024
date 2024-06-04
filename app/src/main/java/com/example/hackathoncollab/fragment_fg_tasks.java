@@ -16,8 +16,6 @@ public class fragment_fg_tasks extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_fg_tasks, container, false);
-
         return view;
-
     }
 }

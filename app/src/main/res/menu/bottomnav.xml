@@ -15,7 +15,8 @@
 
     <item
         android:id="@+id/Payments"
-        android:title="Payments"/>
+        android:title="Payments"
+        android:icon="@drawable/payment_selector"/>
 
 
 </menu>
