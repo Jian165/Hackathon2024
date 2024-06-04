@@ -38,12 +38,14 @@
         android:id="@+id/txt_UserName"
         android:layout_width="293dp"
         android:layout_height="45dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="text"
         android:text="Name"
         app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="@+id/textView"
-        tools:layout_editor_absoluteY="318dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/txt_Password"
@@ -57,6 +59,48 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/txt_UserName"
         app:layout_constraintTop_toBottomOf="@+id/txt_UserName" />
+
+    <Button
+        android:id="@+id/btn_Login"
+        android:layout_width="293dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:text="Login "
+        app:layout_constraintEnd_toEndOf="@+id/txt_Password"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/txt_Password"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Password" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="293dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="40dp"
+
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/btn_Login"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_Login"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Login" />
+
+    <Button
+        android:id="@+id/btn_LogintWithGoogle"
+        android:layout_width="293dp"
+        android:layout_height="45dp"
+        android:text="Login With google"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="570dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Or"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
