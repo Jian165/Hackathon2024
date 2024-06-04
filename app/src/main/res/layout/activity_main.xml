@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,100 +7,107 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/Logintext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:textColor="@color/black"
-        android:textSize="50dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.217" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Sign in to continue"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/Logintext"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="@+id/Logintext"
-        app:layout_constraintTop_toBottomOf="@+id/Logintext" />
+        <TextView
+            android:id="@+id/Logintext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textColor="@color/black"
+            android:textSize="50dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.258" />
 
-    <EditText
-        android:id="@+id/txt_UserName"
-        android:layout_width="293dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Sign in to continue"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/Logintext"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="@+id/Logintext"
+            app:layout_constraintTop_toBottomOf="@+id/Logintext" />
 
-    <EditText
-        android:id="@+id/txt_Password"
-        android:layout_width="293dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:text="Name"
-        app:layout_constraintEnd_toEndOf="@+id/txt_UserName"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/txt_UserName"
-        app:layout_constraintTop_toBottomOf="@+id/txt_UserName" />
+        <EditText
+            android:id="@+id/txt_UserName"
+            android:layout_width="293dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Name"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
-        android:id="@+id/btn_Login"
-        android:layout_width="293dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="16dp"
-        android:text="Login "
-        app:layout_constraintEnd_toEndOf="@+id/txt_Password"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="@+id/txt_Password"
-        app:layout_constraintTop_toBottomOf="@+id/txt_Password" />
+        <EditText
+            android:id="@+id/txt_Password"
+            android:layout_width="293dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:text="Name"
+            app:layout_constraintEnd_toEndOf="@+id/txt_UserName"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_UserName"
+            app:layout_constraintTop_toBottomOf="@+id/txt_UserName" />
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="293dp"
-        android:layout_height="10dp"
-        android:layout_marginTop="40dp"
+        <Button
+            android:id="@+id/btn_Login"
+            android:layout_width="293dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:text="Login "
+            app:layout_constraintEnd_toEndOf="@+id/txt_Password"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="@+id/txt_Password"
+            app:layout_constraintTop_toBottomOf="@+id/txt_Password" />
 
-        android:background="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/btn_Login"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btn_Login"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Login" />
+        <View
+            android:id="@+id/view"
+            android:layout_width="293dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/btn_Login"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/btn_Login"
+            app:layout_constraintTop_toBottomOf="@+id/btn_Login" />
 
-    <Button
-        android:id="@+id/btn_LogintWithGoogle"
-        android:layout_width="293dp"
-        android:layout_height="45dp"
-        android:text="Login With google"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="570dp" />
+        <Button
+            android:id="@+id/btn_LogintWithGoogle"
+            android:layout_width="293dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="12dp"
+            android:text="Login With google"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Or"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Or"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
