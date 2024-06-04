@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">HackathonCollab</string>
     <string name="default_web_client_id" translatable="false">277894516353-7q04b3te1clnfq1d21smgrlcq0rqbkp5.apps.googleusercontent.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
