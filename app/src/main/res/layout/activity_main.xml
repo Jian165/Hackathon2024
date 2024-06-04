@@ -39,7 +39,7 @@
             app:layout_constraintTop_toBottomOf="@+id/Logintext" />
 
         <EditText
-            android:id="@+id/txt_R_Email"
+            android:id="@+id/txt_Mail"
             android:layout_width="293dp"
             android:layout_height="45dp"
             android:layout_marginTop="20dp"
@@ -57,7 +57,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <EditText
-            android:id="@+id/txt_R_Password"
+            android:id="@+id/txt_Password"
             android:layout_width="293dp"
             android:layout_height="45dp"
             android:layout_marginTop="20dp"
@@ -69,23 +69,23 @@
             android:inputType="textPassword"
             android:paddingBottom="5dp"
             android:text="Name"
-            app:layout_constraintEnd_toEndOf="@+id/txt_R_Email"
+            app:layout_constraintEnd_toEndOf="@+id/txt_Mail"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/txt_R_Email"
-            app:layout_constraintTop_toBottomOf="@+id/txt_R_Email" />
+            app:layout_constraintStart_toStartOf="@+id/txt_Mail"
+            app:layout_constraintTop_toBottomOf="@+id/txt_Mail" />
 
         <Button
-            android:id="@+id/btn_Register"
+            android:id="@+id/btn_Login"
             android:layout_width="293dp"
             android:layout_height="45dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/bg_pillshape_purple"
             android:text="Login "
             android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="@+id/txt_R_Password"
+            app:layout_constraintEnd_toEndOf="@+id/txt_Password"
             app:layout_constraintHorizontal_bias="0.492"
-            app:layout_constraintStart_toStartOf="@+id/txt_R_Password"
-            app:layout_constraintTop_toBottomOf="@+id/txt_R_Password" />
+            app:layout_constraintStart_toStartOf="@+id/txt_Password"
+            app:layout_constraintTop_toBottomOf="@+id/txt_Password" />
 
         <View
             android:id="@+id/view"
@@ -93,9 +93,9 @@
             android:layout_height="1dp"
             android:layout_marginTop="8dp"
             android:background="@color/black"
-            app:layout_constraintEnd_toEndOf="@+id/btn_Register"
+            app:layout_constraintEnd_toEndOf="@+id/btn_Login"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/btn_Register"
+            app:layout_constraintStart_toStartOf="@+id/btn_Login"
             app:layout_constraintTop_toBottomOf="@+id/txt_CreateAccount" />
 
         <Button
@@ -128,10 +128,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Create Account"
-            app:layout_constraintEnd_toEndOf="@+id/btn_Register"
+            app:layout_constraintEnd_toEndOf="@+id/btn_Login"
             app:layout_constraintHorizontal_bias="0.493"
-            app:layout_constraintStart_toStartOf="@+id/btn_Register"
-            app:layout_constraintTop_toBottomOf="@+id/btn_Register" />
+            app:layout_constraintStart_toStartOf="@+id/btn_Login"
+            app:layout_constraintTop_toBottomOf="@+id/btn_Login" />
 
         <ImageView
             android:id="@+id/imageView"

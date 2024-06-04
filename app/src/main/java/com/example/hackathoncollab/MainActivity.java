@@ -40,9 +40,9 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        edt_Email =  findViewById(R.id.txt_R_Email);
-        edt_Password =  findViewById(R.id.txt_R_Password);
-        btn_loginLocalMail = findViewById(R.id.btn_Register);
+        edt_Email =  findViewById(R.id.txt_Mail);
+        edt_Password =  findViewById(R.id.txt_Password);
+        btn_loginLocalMail = findViewById(R.id.btn_Login);
         btn_Gmail =  findViewById(R.id.btn_LogintWithGoogle);
         txt_CreateAccount = findViewById(R.id.txt_CreateAccount);
 
@@ -52,6 +52,13 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intent);
+            }
+        });
+
+        btn_loginLocalMail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                performLogin();
             }
         });
 
