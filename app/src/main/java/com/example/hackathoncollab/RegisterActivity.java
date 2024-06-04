@@ -4,10 +4,8 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -20,7 +18,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class ResiterActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
     EditText UserName, Password, Email, ConfirmPassword, BackToLogin;
     Button Register;
@@ -36,7 +34,7 @@ public class ResiterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_resiter);
+        setContentView(R.layout.activity_register);
 
         UserName =  findViewById(R.id.txt_R_UserName);
         Password =  findViewById(R.id.txt_R_Password);
@@ -81,18 +79,19 @@ public class ResiterActivity extends AppCompatActivity {
               public void onComplete(@NonNull Task<AuthResult> task) {
                   if (task.isSuccessful()) {
                       progressDialog.dismiss();
-                      Toast.makeText(ResiterActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                      Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                      sendUserToNextActivity();
 
                   } else {
                       progressDialog.dismiss();
-                      Toast.makeText(ResiterActivity.this, "" + task.getException(), Toast.LENGTH_SHORT).show();
+                      Toast.makeText(RegisterActivity.this, "" + task.getException(), Toast.LENGTH_SHORT).show();
                   }
               }
           });
       }
   }
   private void sendUserToNextActivity() {
-        Intent intent = new Intent(ResiterActivity.this, MainActivity.class);
+        Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);

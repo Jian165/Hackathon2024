@@ -13,7 +13,7 @@
         android:theme="@style/Theme.HackathonCollab"
         tools:targetApi="31">
         <activity
-            android:name=".ResiterActivity"
+            android:name=".RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
