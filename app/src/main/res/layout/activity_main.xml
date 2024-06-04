@@ -15,16 +15,15 @@
             android:id="@+id/Logintext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
             android:text="Login"
             android:textColor="@color/black"
             android:textSize="50dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.217" />
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.441"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <TextView
             android:id="@+id/textView"
@@ -79,18 +78,18 @@
             android:id="@+id/view"
             android:layout_width="293dp"
             android:layout_height="1dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:background="@color/black"
             app:layout_constraintEnd_toEndOf="@+id/btn_Login"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/btn_Login"
-            app:layout_constraintTop_toBottomOf="@+id/btn_Login" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_CreateAccount" />
 
         <Button
             android:id="@+id/btn_LogintWithGoogle"
             android:layout_width="293dp"
             android:layout_height="45dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="4dp"
             android:text="Login With google"
             app:layout_constraintEnd_toEndOf="@+id/view"
             app:layout_constraintHorizontal_bias="0.0"
@@ -107,6 +106,25 @@
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="@+id/view"
             app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <TextView
+            android:id="@+id/txt_CreateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Create Account"
+            app:layout_constraintEnd_toEndOf="@+id/btn_Login"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="@+id/btn_Login"
+            app:layout_constraintTop_toBottomOf="@+id/btn_Login" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="159dp"
+            android:layout_height="142dp"
+            app:srcCompat="@drawable/temp_logo"
+            tools:layout_editor_absoluteX="128dp"
+            tools:layout_editor_absoluteY="31dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

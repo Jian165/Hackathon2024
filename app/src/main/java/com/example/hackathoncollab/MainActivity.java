@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText edt_Email,edt_Password;
     Button btn_loginLocalMail, btn_Gmail;
-    TextView CreateAccount;
+    TextView txt_CreateAccount;
 
 
     @Override
@@ -23,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
 
         edt_Email =  findViewById(R.id.txt_Email);
         edt_Password =  findViewById(R.id.txt_Password);
+        btn_loginLocalMail = findViewById(R.id.btn_Login);
+        btn_loginLocalMail =  findViewById(R.id.btn_LogintWithGoogle);
+
+
 
 
 }
