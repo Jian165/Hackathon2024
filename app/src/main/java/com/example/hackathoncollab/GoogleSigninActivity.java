@@ -36,9 +36,6 @@ public class GoogleSigninActivity extends MainActivity{
 
     FirebaseUser mUser;
 
-    DatabaseReference DataRef;
-
-    String UserID;
     ProgressDialog progressDialog;
 
     @Override
@@ -92,8 +89,15 @@ public class GoogleSigninActivity extends MainActivity{
                         if (task.isSuccessful()) {
                             progressDialog.dismiss();
                             Toast.makeText(GoogleSigninActivity.this, "Login Success!", Toast.LENGTH_SHORT).show();
-                            return;
+                            updateUI();
                         }
+                        else
+                        {
+                            progressDialog.dismiss();
+                            Toast.makeText(GoogleSigninActivity.this, "Login Fail \n Error:"+task.getException(), Toast.LENGTH_SHORT).show();
+                            finish();
+                        }
+
 
                     }
                 }

@@ -40,7 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
         Password =  findViewById(R.id.txt_R_Password);
         Email =  findViewById(R.id.txt_R_Email);
         ConfirmPassword = findViewById(R.id.txt_R_PasswordConfirm);
-
+        progressDialog = new ProgressDialog(this);
         Register =  findViewById(R.id.btn_Register);
 
         mAuth = FirebaseAuth.getInstance();
@@ -79,11 +79,13 @@ public class RegisterActivity extends AppCompatActivity {
               public void onComplete(@NonNull Task<AuthResult> task) {
                   if (task.isSuccessful()) {
                       progressDialog.dismiss();
-                      Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
                       sendUserToNextActivity();
+                      Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+
 
                   } else {
                       progressDialog.dismiss();
+                      sendUserToNextActivity();
                       Toast.makeText(RegisterActivity.this, "" + task.getException(), Toast.LENGTH_SHORT).show();
                   }
               }
@@ -92,7 +94,6 @@ public class RegisterActivity extends AppCompatActivity {
   }
   private void sendUserToNextActivity() {
         Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }

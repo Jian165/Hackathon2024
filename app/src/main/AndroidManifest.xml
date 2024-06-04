@@ -16,6 +16,14 @@
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
+            android:name=".HomeActivity"
+            android:exported="false"
+            />
+        <activity
+            android:name=".GoogleSigninActivity"
+            android:exported="false"
+            />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

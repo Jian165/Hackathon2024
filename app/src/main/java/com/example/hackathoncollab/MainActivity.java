@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
     ProgressDialog progressDialog;
 
-    String emailPattern  = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\\\.[a-zA-Z]{2,}$";
+    String emailPattern  = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$" ;
+
 
 
 
@@ -45,6 +46,10 @@ public class MainActivity extends AppCompatActivity {
         btn_loginLocalMail = findViewById(R.id.btn_Login);
         btn_Gmail =  findViewById(R.id.btn_LogintWithGoogle);
         txt_CreateAccount = findViewById(R.id.txt_CreateAccount);
+        progressDialog = new ProgressDialog(this);
+        mAuth = FirebaseAuth.getInstance();
+        mUser =  mAuth.getCurrentUser();
+
 
         txt_CreateAccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +64,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 performLogin();
+            }
+        });
+
+        btn_Gmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,GoogleSigninActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -91,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
 
                         progressDialog.dismiss();
                         sendUserToNextActivity();
-
                         Toast.makeText(MainActivity.this, "Successfully login", Toast.LENGTH_SHORT).show();
 
                     }
