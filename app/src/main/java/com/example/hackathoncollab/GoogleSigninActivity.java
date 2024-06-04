@@ -3,6 +3,7 @@ package com.example.hackathoncollab;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -20,11 +21,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+
 
 public class GoogleSigninActivity extends MainActivity{
 
@@ -38,6 +37,10 @@ public class GoogleSigninActivity extends MainActivity{
 
     ProgressDialog progressDialog;
 
+    DatabaseReference DataRef;
+    String UserName;
+    String UserID;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +49,8 @@ public class GoogleSigninActivity extends MainActivity{
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Google Sign in...");
         progressDialog.show();
+        UserID =  mAuth.getCurrentUser().getUid();
+
 
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -89,6 +94,15 @@ public class GoogleSigninActivity extends MainActivity{
                         if (task.isSuccessful()) {
                             progressDialog.dismiss();
                             Toast.makeText(GoogleSigninActivity.this, "Login Success!", Toast.LENGTH_SHORT).show();
+
+
+                            UserID = mAuth.getCurrentUser().getUid();
+                            DataRef = FirebaseDatabase.getInstance("https://hackathoncollab2024-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference().child("Users").child(UserID);
+                            FirebaseUser User = FirebaseAuth.getInstance().getCurrentUser();
+                            UserName =  User.getDisplayName();
+
+                            DataRef.child("UserName").setValue(UserName);
+
                             updateUI();
                         }
                         else
